@@ -8,3 +8,5 @@ import * as firebase from 'firebase';
     storageBucket: "goalcoach-ae743.appspot.com",
     messagingSenderId: "183303894280"
   };
+
+  export const firebaseApp = firebase.initializeApp(config);
