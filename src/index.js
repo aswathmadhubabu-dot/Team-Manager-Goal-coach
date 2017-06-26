@@ -6,7 +6,16 @@ import App from './components/App';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 
-
+firebaseApp.auth().onAuthStateChanged(user => {
+    if(user)
+    {
+        console.log('user has signed in or signed out',user);
+    }
+    else
+    {
+        console.log('signes out');
+    }
+})
 
 ReactDOM.render( <Router path='/' history={browserHistory}>
     <Route path='/app' component={App} />
