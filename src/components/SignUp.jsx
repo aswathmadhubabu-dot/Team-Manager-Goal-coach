@@ -7,7 +7,7 @@ class SignUp extends Component{
     <div className="card-block">
 
         
-        <div className="form-header blue-gradient">
+        <div className="form-header blue-gradient text-center">
             <h3><i className="fa fa-user"></i> Register:</h3>
         </div>
 
