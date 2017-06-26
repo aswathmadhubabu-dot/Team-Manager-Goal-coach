@@ -3,39 +3,30 @@ import React , {Component} from 'react';
 class SignUp extends Component{
     render(){
         return(      
-<div class="card">
-    <div class="card-block">
+<div className="card">
+    <div className="card-block">
 
         
-        <div class="form-header blue-gradient">
-            <h3><i class="fa fa-user"></i> Register:</h3>
+        <div className="form-header blue-gradient">
+            <h3><i className="fa fa-user"></i> Register:</h3>
         </div>
 
-        
-        <div class="md-form">
-            <i class="fa fa-user prefix"></i>
-            <input type="text" id="form3" class="form-control" />
-            <label for="form3">Your name</label>
-        </div>
-        <div class="md-form">
-            <i class="fa fa-envelope prefix"></i>
-            <input type="text" id="form2" class="form-control" />
+        <div className="md-form">
+            <i className="fa fa-envelope prefix"></i>
+            <input type="text" id="form2" className="form-control" />
             <label for="form2">Your email</label>
         </div>
 
-        <div class="md-form">
-            <i class="fa fa-lock prefix"></i>
-            <input type="password" id="form4" class="form-control" />
+        <div className="md-form">
+            <i className="fa fa-lock prefix"></i>
+            <input type="password" id="form4" className="form-control" />
             <label for="form4">Your password</label>
         </div>
 
-        <div class="text-center">
-            <button class="btn btn-indigo">Sign up</button>
-            <hr>
-            <fieldset class="form-group">
-                <input type="checkbox" id="checkbox1" />
-                <label for="checkbox1">Subscribe me to the newsletter</label>
-            </fieldset>
+        <div className="text-center">
+            <button className="btn btn-indigo">Sign up</button>
+            <hr />
+           
         </div>
 
     </div>
