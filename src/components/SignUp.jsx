@@ -23,6 +23,7 @@ class SignUp extends Component {
                             Register:</h3>
                     </div>
                     <hr/>
+                     <form id="signUpForm">
                     <div className="md-form">
                         <i className="fa  fa-envelope-open prefix"></i>
                         <input
@@ -30,7 +31,10 @@ class SignUp extends Component {
                             id="form2"
                             className="form-control"
                             placeholder="E-mail"
-                            onChange={event => this.setState({email: event.target.value})}/>
+                            onChange={event => this.setState({email: event.target.value})}
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                            title="Use valid email ID"
+                            required/>
 
                     </div>
                     <hr/>
@@ -43,7 +47,8 @@ class SignUp extends Component {
                             placeholder="Password"
                             onChange={event => this.setState({password: event.target.value})}
                             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                            required/>
 
                     </div>
 
