@@ -21,7 +21,7 @@ class SignUp extends Component {
                     </div>
 
                     <div className="md-form">
-                        <i className="fa fa-envelope prefix"></i>
+                        <i className="fa  fa-envelope-open prefix"></i>
                         <input type="text" id="form2" className="form-control" placeholder="E-mail" onChange={event => this.setState({email:event.target.value})}/>
 
                     </div>
