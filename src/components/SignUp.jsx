@@ -28,7 +28,7 @@ class SignUp extends Component {
 
                     <div className="md-form">
                         <i className="fa fa-lock prefix"></i>
-                        <input type="password" id="form4" className="form-control"/>
+                        <input type="password" id="form4" className="form-control" placeholder="Password" onChange={event => this.setState({password:event.target.value})}/>
 
                     </div>
 
