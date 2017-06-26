@@ -16,13 +16,13 @@ class SignUp extends Component {
         return (
             <div className="card">
                 <div className="card-block">
-
+                <hr/>
                     <div className="form-header text-center">
                         <h3>
                             <i className="fa fa-user"></i>
                             Register:</h3>
                     </div>
-
+                    <hr/>
                     <div className="md-form">
                         <i className="fa  fa-envelope-open prefix"></i>
                         <input
@@ -33,7 +33,7 @@ class SignUp extends Component {
                             onChange={event => this.setState({email: event.target.value})}/>
 
                     </div>
-
+                    <hr/>
                     <div className="md-form">
                         <i className="fa fa-lock prefix"></i>
                         <input
