@@ -1,6 +1,14 @@
 import React, {Component} from 'react';
 
 class SignUp extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email :'',
+            password : ''
+        }
+    }
+    
     render() {
         return (
             <div className="card">
@@ -14,7 +22,7 @@ class SignUp extends Component {
 
                     <div className="md-form">
                         <i className="fa fa-envelope prefix"></i>
-                        <input type="text" id="form2" className="form-control"/>
+                        <input type="text" id="form2" className="form-control" placeholder="E-mail" onChange={event => this.setState({email:event.target.value})}/>
 
                     </div>
 
