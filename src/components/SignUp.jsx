@@ -5,7 +5,10 @@ class SignUp extends Component {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            error: {
+                message: ''
+            }
         }
     }
     signUp()
@@ -17,6 +20,7 @@ class SignUp extends Component {
             .auth()
             .createUserWithEmailAndPassword(email, password)
             .catch(error => console.log(error));
+        this.setState({error});
 
     }
     render() {
@@ -65,6 +69,8 @@ class SignUp extends Component {
 
                         </div>
                     </form>
+                    <div className="well">{this.state.error.message}</div>
+
                 </div>
             </div>
 
