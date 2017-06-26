@@ -7,20 +7,20 @@ class SignUp extends Component{
     <div className="card-block">
 
         
-        <div className="form-header blue-gradient text-center">
+        <div className="form-header text-center">
             <h3><i className="fa fa-user"></i> Register:</h3>
         </div>
 
         <div className="md-form">
             <i className="fa fa-envelope prefix"></i>
             <input type="text" id="form2" className="form-control" />
-            <label for="form2">Your email</label>
+            
         </div>
 
         <div className="md-form">
             <i className="fa fa-lock prefix"></i>
             <input type="password" id="form4" className="form-control" />
-            <label for="form4">Your password</label>
+            
         </div>
 
         <div className="text-center">
