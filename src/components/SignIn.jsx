@@ -18,7 +18,7 @@ class SignIn extends Component {
         const password = this.state.password;
         firebaseApp
             .auth()
-            .createUserWithEmailAndPassword(email, password)
+            .signInWithEmailAndPassword(email, password)
             .catch(error => {
                 console.log("Error:",error);
                 this.setState({error})
@@ -38,15 +38,14 @@ class SignIn extends Component {
                     <hr/>
                     <form id="signInForm">
                         <div className="md-form">
-                            <i className="fa  fa-envelope-open prefix"></i>
+                            <i className="fa  fa-user-circle-o prefix"></i>
                             <input
                                 type="text"
                                 id="form2"
                                 className="form-control"
                                 placeholder="E-mail"
                                 onChange={event => this.setState({email: event.target.value})}
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                                title="Use valid email ID"
+                               
                                 required/>
 
                         </div>
@@ -59,14 +58,13 @@ class SignIn extends Component {
                                 className="form-control"
                                 placeholder="Password"
                                 onChange={event => this.setState({password: event.target.value})}
-                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                               
                                 required/>
 
                         </div>
 
                         <div className="text-center">
-                            <button className="btn btn-indigo" type="button" onClick={() => this.signIn()}>Sign up</button>
+                            <button className="btn btn-indigo" type="button" onClick={() => this.signIn()}>Sign In</button>
                             <hr/>
 
                         </div>
