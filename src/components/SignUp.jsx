@@ -16,7 +16,7 @@ class SignUp extends Component {
         return (
             <div className="card">
                 <div className="card-block">
-                <hr/>
+                    <hr/>
                     <div className="form-header text-center">
                         <h3>
                             <i className="fa fa-user"></i>
@@ -41,7 +41,9 @@ class SignUp extends Component {
                             id="form4"
                             className="form-control"
                             placeholder="Password"
-                            onChange={event => this.setState({password: event.target.value})}/>
+                            onChange={event => this.setState({password: event.target.value})}
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
 
                     </div>
 
