@@ -12,7 +12,7 @@ class AddGoal extends Component {
         console.log("Goal State",this.state);
     }    
     render(){
-        return(<div className="card">
+        return(<div>
             <div className="container">
 					<div className="col-md-4 col-md-offset-4">
 
