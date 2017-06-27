@@ -1,4 +1,5 @@
 import {SIGNED_IN} from '../constants.js';
+import {SET_GOALS} from '../constants.js';
 
 let user = {
     email :null
