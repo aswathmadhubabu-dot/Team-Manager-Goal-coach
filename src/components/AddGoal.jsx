@@ -12,7 +12,8 @@ class AddGoal extends Component {
     {
         console.log("Goal State", this.state);
         const {title} = this.state;
-        goalRef.push({email:'ases573@gmail.com',title});
+        const {email} = this.props;
+        goalRef.push({email, title});
     }
     render() {
         return (
@@ -41,12 +42,11 @@ class AddGoal extends Component {
         )
 
     }
-    mapStateToProps(state){
-        const{ email }= state;
-        return{
-            email
-        }
-    }
+
+}
+mapStateToProps(state) {
+    const {email} = state;
+    return {email}
 }
 
-export default connect(mapStateToProps,null)( AddGoal);
+export default connect(mapStateToProps, null)(AddGoal);
