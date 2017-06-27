@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import {goalRef} from '../firebase';
 class AddGoal extends Component {
     constructor(props) {
         super(props);
