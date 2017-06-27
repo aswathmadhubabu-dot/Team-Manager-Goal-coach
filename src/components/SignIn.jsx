@@ -34,7 +34,7 @@ class SignIn extends Component {
                     <div className="form-header text-center">
                         <h3>
                             <i className="fa fa-user"></i>
-                            Register:</h3>
+                            Login:</h3>
                     </div>
                     <hr/>
                     <form id="signInForm">
@@ -71,7 +71,7 @@ class SignIn extends Component {
                         </div>
                     </form>
                     <div className="well">{this.state.error.message}</div>
-                    <div><Link to={'/signup'}>Sign Up Instead</Link></div>  
+                    <div><Link className="btn btn-info text-center" type="button" to={'/signup'}>Sign Up Instead</Link></div>  
                 </div>
             </div>
 
