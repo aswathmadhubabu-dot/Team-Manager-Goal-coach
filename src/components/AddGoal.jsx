@@ -44,7 +44,7 @@ class AddGoal extends Component {
     }
 
 }
-mapStateToProps(state) {
+function mapStateToProps(state) {
     const {email} = state;
     return {email}
 }
