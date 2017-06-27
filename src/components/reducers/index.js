@@ -1,0 +1,14 @@
+import {SIGNED_IN} from '../constants.js';
+
+let user = {
+    email :null
+}
+
+export default (state = user,action) => {
+    switch(action.type)
+    {
+        case SIGNED_IN :
+        const {email} = action;
+        user = {email};
+    }
+}
