@@ -15,6 +15,7 @@ firebaseApp.auth().onAuthStateChanged(user => {
     else
     {
         console.log('signes out');
+        browserHistory.replace('/signin');
     }
 })
 
