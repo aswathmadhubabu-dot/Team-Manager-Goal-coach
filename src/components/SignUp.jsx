@@ -74,7 +74,7 @@ class SignUp extends Component {
                     </form>
                     <div className="well">{this.state.error.message}</div>
                     <div className="text-center">
-                        <Link className="btn btn-info text-center" type="button" to={'/signin'}>SIGN IN</Link>
+                        <Link to={'/signin'}>Already a user ? Sign In here..</Link>
                     </div>
                 </div>
             </div>
