@@ -21,7 +21,7 @@ class SignUp extends Component {
             .auth()
             .createUserWithEmailAndPassword(email, password)
             .catch(error => {
-                console.log("Error:",error);
+                console.log("Error:", error);
                 this.setState({error})
             });
 
@@ -73,7 +73,9 @@ class SignUp extends Component {
                         </div>
                     </form>
                     <div className="well">{this.state.error.message}</div>
-
+                    <div className="text-center">
+                        <Link className="btn btn-info text-center" type="button" to={'/signin'}>SIGN IN</Link>
+                    </div>
                 </div>
             </div>
 

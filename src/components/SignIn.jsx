@@ -21,7 +21,7 @@ class SignIn extends Component {
             .auth()
             .signInWithEmailAndPassword(email, password)
             .catch(error => {
-                console.log("Error:",error);
+                console.log("Error:", error);
                 this.setState({error})
             });
 
@@ -46,7 +46,6 @@ class SignIn extends Component {
                                 className="form-control"
                                 placeholder="E-mail"
                                 onChange={event => this.setState({email: event.target.value})}
-                               
                                 required/>
 
                         </div>
@@ -59,7 +58,6 @@ class SignIn extends Component {
                                 className="form-control"
                                 placeholder="Password"
                                 onChange={event => this.setState({password: event.target.value})}
-                               
                                 required/>
 
                         </div>
@@ -71,7 +69,9 @@ class SignIn extends Component {
                         </div>
                     </form>
                     <div className="well">{this.state.error.message}</div>
-                    <div className="text-center"><Link className="btn btn-info text-center" type="button" to={'/signup'}>SIGN UP</Link></div>  
+                    <div className="text-center">
+                        <Link className="btn btn-info text-center" type="button" to={'/signup'}>SIGN UP</Link>
+                    </div>
                 </div>
             </div>
 
