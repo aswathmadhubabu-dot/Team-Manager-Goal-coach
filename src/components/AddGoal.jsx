@@ -12,8 +12,8 @@ class AddGoal extends Component {
         console.log("Goal State",this.state);
     }    
     render(){
-        return(<div>
-            <div className="row">
+        return(<div className="card">
+            <div className="container">
 					<div className="col-md-4 col-md-offset-4">
 
 						<div className="form-group has-feedback">
