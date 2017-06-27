@@ -7,11 +7,14 @@ class AddGoal extends Component {
             title : ''
         }
     }
-    
+    AddGoal()
+    {
+        console.log("Goal State",this.state);
+    }    
     render(){
         return(<div>
             <div className="row">
-					<div className="col-md-4 col-md-offset-3">
+					<div className="col-md-4 col-md-offset-4">
 
 						<div className="form-group has-feedback">
 <input type="text" className="form-control text-center" placeholder="Enter Goals" required onChange={event => this.setState({ title: event.target.value })} onKeyPress={event => { if (event.key === 'Enter') this.AddGoal() } } />
