@@ -9,7 +9,9 @@ class App extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="text-center">
+                <h3 className="text-center">Goals</h3>
+                <
                 <button className="btn btn-danger" onClick={() => this.signOut()}>Sign Out</button>
             </div>
         )
