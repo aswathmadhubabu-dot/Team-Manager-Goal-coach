@@ -10,6 +10,7 @@ firebaseApp.auth().onAuthStateChanged(user => {
     if(user)
     {
         console.log('user has signed in or signed out',user);
+        browserHistory.push('/app');
     }
     else
     {
