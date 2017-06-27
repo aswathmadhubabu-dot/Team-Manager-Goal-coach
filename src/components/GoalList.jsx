@@ -16,3 +16,5 @@ class GoalList extends Component {
         )
     }
 }
+
+export default GoalList;
