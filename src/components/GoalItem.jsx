@@ -8,7 +8,8 @@ class GoalItem extends Component {
         const {email} = this.props.user;
         const {title} = this.props.goal;
         const {serverKey} = this.props.goal;
-
+        goalRef.child(serverKey).remove();
+        completeGoalRef.push({email, title});
         console.log();
     }
     render() {
