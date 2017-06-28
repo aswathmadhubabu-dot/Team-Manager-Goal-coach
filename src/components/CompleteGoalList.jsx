@@ -17,16 +17,21 @@ class CompleteGoalList extends Component {
     }
     render() {
         return (
-           <div className="col-lg-6 col-lg-offset-3 container text-center well">
+            <div className="col-lg-6 col-lg-offset-3 container text-center well">
                 <ul className="list-group">
                     {this
                         .props
                         .completeGoals
                         .map(function (completeGoal, index) {
+                            const {title, email} = completeGoal;
                             return (
                                 <li key={index} className="list-group-item">
-                                    {goal.title}&nbsp;&nbsp;
-                                    <GoalItem key={index} goal={goal}/>
+                                    {title}&nbsp;&nbsp;
+                                    <strong>{title}&nbsp;&nbsp;</strong>
+                                    <span>Submitted By:<em>
+                                            {email}
+                                        </em>
+                                    </span>
                                 </li>
                             )
                         })
