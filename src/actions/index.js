@@ -18,7 +18,7 @@ export function setGoals(goals) {
     return action;
 }
 
-export function setCompleted(goals) {
+export function setCompleted() {
     const action = {
         type: SET_COMPLETED,
         goals
