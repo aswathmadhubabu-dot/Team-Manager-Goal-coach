@@ -3,7 +3,11 @@ import {connect} from 'react-redux';
 import {completeGoalRef} from '../firebase';
 class GoalItem extends Component {
     completeGoal()
-    {}
+    {
+        const {email} = this.props.user;
+        const {title} = this.props.goal;
+        console.log();
+    }
     render() {
         console.log('this.props.goal', this.props.goal);
         const {email, title} = this.props.goal;
@@ -24,4 +28,4 @@ function mapStateToProps(state) {
     console.log('state in goalItem', user);
     return {user}
 }
-export default GoalItem;
+export default connect(mapStateToProps, null)(GoalItem);
