@@ -12,8 +12,9 @@ class App extends Component {
     render() {
         return (
             <div className="text-center">
-                <h3 className="text-center">Goals</h3>
+                <h3 className="text-center">Goal Coach</h3>
                 <AddGoal />
+                <h4 className="text-center">Goals</h4>
                 <GoalList />
                 <button className="btn btn-danger" onClick={() => this.signOut()}>Sign Out</button>
             </div>

@@ -2,27 +2,14 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {completeGoalRef} from '../firebase';
 class GoalItem extends Component {
-    componentDidMount() {
-        goalRef.on('value', snap => {
-            let goals = [];
-            snap.forEach(goal => {
-                const {email, title} = goal.val();
-                goals.push({email, title});
-            })
-            console.log("GOALS", goals);
-            this
-                .props
-                .setGoals(goals);
-        })
-
-    }
+   
     completeGoal()
     {
         
     }
 
     render() {
-
+ const {email,title} = this.props.goal;
         return (
             <div className="col-lg-6 col-lg-offset-3 container text-center well">
                 <ul className="list-group">
