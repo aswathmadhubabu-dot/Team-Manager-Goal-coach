@@ -18,7 +18,9 @@ class GoalList extends Component {
 
     render() {
         return (
-            <div>GoalList</div>
+            <div>
+                
+            </div>
         )
     }
 }
