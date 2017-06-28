@@ -13,7 +13,7 @@ class GoalItem extends Component {
         const {email, title} = this.props.goal;
         return (
             <div>
-                <strong>{title}</strong>
+                <strong>{title}&nbsp;&nbsp;</strong>
                 <span>Submitted By:<em>
                         {email}
                     </em>
