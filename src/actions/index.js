@@ -18,10 +18,10 @@ export function setGoals(goals) {
     return action;
 }
 
-export function setCompleted() {
-    const action = {
-        type: SET_COMPLETED,
-        goals
-    }
-    return action;
+export function setCompleted(completeGoals) {
+  const action = {
+    type: SET_COMPLETED,
+    completeGoals
+  }
+  return action;
 }
