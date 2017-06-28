@@ -21,6 +21,7 @@ class App extends Component {
                 <hr />
                 <h4 className="text-center">Complete Goals List</h4>
                 <CompleteGoalList />
+                <hr />
                 <button className="btn btn-danger" onClick={() => this.signOut()}>Sign Out</button>
             </div>
         )
