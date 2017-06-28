@@ -20,6 +20,7 @@ class GoalList extends Component {
     }
 
     render() {
+        console.log("COmponen FINder",this.props.goal);
         return (
             <div className="col-lg-4 col-lg-offset-4 container">
                 <ul className="list-group">
@@ -30,7 +31,7 @@ class GoalList extends Component {
                         .goals
                         .map(function (goal, index) {
                             return (
-                                <li key={index} className="list-group-item">{goal.title}<span>Submitted By :<em> </em></span></li>
+                                <li key={index} className="list-group-item">{goal.title}<span>Submitted By :<em>{goal.email} </em></span></li>
                             )
                         })
 }
