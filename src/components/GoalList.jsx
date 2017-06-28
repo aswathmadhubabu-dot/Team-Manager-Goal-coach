@@ -18,6 +18,10 @@ class GoalList extends Component {
         })
 
     }
+    completeGoal()
+    {
+        
+    }
 
     render() {
 
