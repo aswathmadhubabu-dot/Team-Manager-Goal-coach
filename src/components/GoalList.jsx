@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {setGoals} from '../actions';
 import {goalRef} from '../firebase';
-
+import {completeGoalRef} from '../firebase';
 class GoalList extends Component {
     componentDidMount() {
         goalRef.on('value', snap => {
