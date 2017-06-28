@@ -46,8 +46,9 @@ class AddGoal extends Component {
 
 }
 function mapStateToProps(state) {
-    const {email} = state;
-    return {email}
+    const {user} = state;
+    console.log('state in addgoal',user);
+    return {user}
 }
 
 export default connect(mapStateToProps, null)(AddGoal);
