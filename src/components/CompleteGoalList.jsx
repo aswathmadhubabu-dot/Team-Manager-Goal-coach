@@ -7,7 +7,7 @@ class CompleteGoalList extends Component {
             let completeGoals = [];
             snap.forEach(completeGoal => {
                 const {email, title} = completeGoal.val();
-                goals.push({email, title});
+                completeGoals.push({email, title});
             })
             console.log("COMPLETED GOALS", completeGoals);
             this
@@ -37,6 +37,7 @@ class CompleteGoalList extends Component {
                         })
 }
                 </ul>
+                <button className="btn btn-blue-gray">Clear All</button>
             </div>
         );
     }
