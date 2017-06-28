@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {completeGoalRef} from '../firebase';
+import {setCompleted}  from '../actions';
 class CompleteGoalList extends Component {
     componentDidMount(){
         completeGoalRef.on('value', snap => {
@@ -9,6 +10,7 @@ class CompleteGoalList extends Component {
                 goals.push({email, title});
             })
             console.log("COMPLETED GOALS",completeGoals);
+            this.props.setCompleted(completeGoals);
         })
     }
     render() {
@@ -19,5 +21,9 @@ class CompleteGoalList extends Component {
         );
     }
 }
-
+function mapStateToProps(state) {
+    const {goals} = state;
+    console.log('state in goalList', goals);
+    return {goals}
+}
 export default CompleteGoalList;
