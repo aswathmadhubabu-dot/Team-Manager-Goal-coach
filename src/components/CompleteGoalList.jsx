@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {completeGoalRef} from '../firebase';
 import {setCompleted} from '../actions';
 class CompleteGoalList extends Component {
@@ -47,4 +48,4 @@ function mapStateToProps(state) {
     console.log('state in CompletegoalList', completeGoals);
     return {completeGoals}
 }
-export default CompleteGoalList;
+export default connect(mapStateToProps, null)(CompleteGoalList);
