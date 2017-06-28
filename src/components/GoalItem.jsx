@@ -16,5 +16,4 @@ class GoalItem extends Component {
         )
     }
 }
-
 export default GoalItem;
