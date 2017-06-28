@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {setGoals} from '../actions';
 import {goalRef} from '../firebase';
-import {completeGoalRef} from '../firebase';
 import GoalItem from './GoalItem';
 class GoalList extends Component {
     componentDidMount() {
@@ -32,7 +31,7 @@ class GoalList extends Component {
                             return (
                                 <li key={index} className="list-group-item">
                                     {goal.title}&nbsp;&nbsp;
-                                    <GoalItem />
+                                    <GoalItem key={index} goal={goal}/>
                                 </li>
                             )
                         })
