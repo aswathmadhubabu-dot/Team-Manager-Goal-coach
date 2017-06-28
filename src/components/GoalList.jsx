@@ -12,6 +12,7 @@ class GoalList extends Component {
                 goals.push({email , title});
             })
             console.log("GOALS",goals);
+            this.props.setGoals(goals);
         })
     }
 
@@ -23,9 +24,9 @@ class GoalList extends Component {
 }
 
 function mapStateToProps(state) {
-    const {user} = state;
-    console.log('state in addgoal',user);
-    return {user}
+    const {goals} = state;
+    console.log('state in goalList',goals);
+    return {goals}
 }
 
-export default connect(mapStateToProps, null)(AddGoal);
+export default connect(mapStateToProps, {setGoals})(GoalList);
