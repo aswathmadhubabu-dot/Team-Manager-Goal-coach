@@ -38,7 +38,7 @@ class CompleteGoalList extends Component {
                         })
 }
                 </ul>
-                <button className="btn btn-blue-gray">Clear All</button>
+                <button className="btn btn-blue-grey">Clear All</button>
             </div>
         );
     }
