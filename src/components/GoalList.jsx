@@ -8,18 +8,30 @@ class GoalList extends Component {
         goalRef.on('value', snap => {
             let goals = [];
             snap.forEach(goal => {
-                const {email , title} = goal.val();
-                goals.push({email , title});
+                const {email, title} = goal.val();
+                goals.push({email, title});
             })
-            console.log("GOALS",goals);
-            this.props.setGoals(goals);
+            console.log("GOALS", goals);
+            this
+                .props
+                .setGoals(goals);
         })
     }
 
     render() {
         return (
             <div>
-                
+                <ul className="list-group">
+                    {this
+                        .props
+                        .goals
+                        .map(function (goal, index) {
+                            return (
+                                <li key={index} className="list-group-item">{goal.title}</li>
+                            )
+                        })
+}
+                </ul>
             </div>
         )
     }
@@ -27,7 +39,7 @@ class GoalList extends Component {
 
 function mapStateToProps(state) {
     const {goals} = state;
-    console.log('state in goalList',goals);
+    console.log('state in goalList', goals);
     return {goals}
 }
 
