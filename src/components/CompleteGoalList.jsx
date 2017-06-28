@@ -8,15 +8,14 @@ class CompleteGoalList extends Component {
             let completeGoals = [];
             snap.forEach(completeGoal => {
                 const {email, title} = completeGoal.val();
-                completeGoals.push({email, title});
+                completeGoals.push({email, title})
             })
-            console.log("COMPLETED GOALS", completeGoals);
             this
                 .props
                 .setCompleted(completeGoals);
         })
     }
-    clearCompleted(){
+    clearCompleted() {
         completeGoalRef.set([]);
     }
     render() {
@@ -41,7 +40,7 @@ class CompleteGoalList extends Component {
                         })
 }
                 </ul>
-                <button className="btn btn-info" onClick={() =>this.clearCompleted()}>Clear All</button>
+                <button className="btn btn-info" onClick={() => this.clearCompleted()}>Clear All</button>
             </div>
         );
     }
@@ -51,4 +50,4 @@ function mapStateToProps(state) {
     console.log('state in CompletegoalList', completeGoals);
     return {completeGoals}
 }
-export default connect(mapStateToProps, null)(CompleteGoalList);
+export default connect(mapStateToProps, { setCompleted })(CompleteGoalList);
