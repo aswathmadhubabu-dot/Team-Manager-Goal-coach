@@ -22,7 +22,7 @@ class GoalList extends Component {
     render() {
 
         return (
-            <div className="col-lg-6 col-lg-offset-4 container text-center well">
+            <div className="col-lg-6 col-lg-offset-3 container text-center well">
                 <ul className="list-group">
                     {this
                         .props
@@ -32,7 +32,7 @@ class GoalList extends Component {
                                 <li key={index} className="list-group-item">{goal.title}&nbsp;&nbsp;<span>Submitted By :<em>{goal.email}
                                         </em>
                                     </span>
-                                    <button className="btn btn-primary">Complete</button>
+                                    <button className="btn btn-primary" onClick={() => this.completeGoal()}>Complete</button>
                                 </li>
                             )
                         })
