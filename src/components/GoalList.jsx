@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {setGoals} from '../actions';
 import {goalRef} from '../firebase';
 import {completeGoalRef} from '../firebase';
+import {GoalItem} from './GoalItem';
 class GoalList extends Component {
     componentDidMount() {
         goalRef.on('value', snap => {
@@ -18,10 +19,6 @@ class GoalList extends Component {
         })
 
     }
-    completeGoal()
-    {
-        
-    }
 
     render() {
 
@@ -33,10 +30,9 @@ class GoalList extends Component {
                         .goals
                         .map(function (goal, index) {
                             return (
-                                <li key={index} className="list-group-item">{goal.title}&nbsp;&nbsp;<span>Submitted By :<em>{goal.email}
-                                        </em>
-                                    </span>
-                                    <button className="btn btn-primary" onClick={() => this.completeGoal()}>Complete</button>
+                                <li key={index} className="list-group-item">
+                                    {goal.title}&nbsp;&nbsp;
+                                    <GoalItem />
                                 </li>
                             )
                         })
