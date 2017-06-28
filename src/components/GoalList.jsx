@@ -1,3 +1,9 @@
+/*
+ * @Author: Aswath MadhuBabu
+ * @Date: 2017-06-28 20:41:27
+ * @Last Modified by:   Aswath MadhuBabu
+ * @Last Modified time: 2017-06-28 20:41:27
+ */
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {setGoals} from '../actions';
@@ -10,7 +16,7 @@ class GoalList extends Component {
             snap.forEach(goal => {
                 const {email, title} = goal.val();
                 const serverKey = goal.key;
-                goals.push({email, title,serverKey});
+                goals.push({email, title, serverKey});
             })
             console.log("GOALS", goals);
             this

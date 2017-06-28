@@ -1,3 +1,9 @@
+/*
+ * @Author: Aswath MadhuBabu 
+ * @Date: 2017-06-28 20:42:17 
+ * @Last Modified by:   Aswath MadhuBabu 
+ * @Last Modified time: 2017-06-28 20:42:17 
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore} from 'redux';

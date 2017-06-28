@@ -1,3 +1,9 @@
+/*
+ * @Author: Aswath MadhuBabu 
+ * @Date: 2017-06-28 20:41:16 
+ * @Last Modified by:   Aswath MadhuBabu 
+ * @Last Modified time: 2017-06-28 20:41:16 
+ */
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {completeGoalRef} from '../firebase';
@@ -50,4 +56,4 @@ function mapStateToProps(state) {
     console.log('state in CompletegoalList', completeGoals);
     return {completeGoals}
 }
-export default connect(mapStateToProps, { setCompleted })(CompleteGoalList);
+export default connect(mapStateToProps, {setCompleted})(CompleteGoalList);

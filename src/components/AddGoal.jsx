@@ -1,3 +1,9 @@
+/*
+ * @Author: Aswath MadhuBabu 
+ * @Date: 2017-06-28 20:41:02 
+ * @Last Modified by:   Aswath MadhuBabu 
+ * @Last Modified time: 2017-06-28 20:41:02 
+ */
 import React, {Component} from 'react';
 import {goalRef} from '../firebase';
 import {connect} from 'react-redux';
