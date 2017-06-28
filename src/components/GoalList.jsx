@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {SET_GOALS} from '../actions';
 import {goalRef} from '../firebase';
 
 class GoalList extends Component {
@@ -20,4 +22,10 @@ class GoalList extends Component {
     }
 }
 
-export default GoalList;
+function mapStateToProps(state) {
+    const {user} = state;
+    console.log('state in addgoal',user);
+    return {user}
+}
+
+export default connect(mapStateToProps, null)(AddGoal);
