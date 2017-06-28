@@ -6,6 +6,7 @@ class GoalItem extends Component {
     {
         const {email} = this.props.user;
         const {title} = this.props.goal;
+        const {serverKey} = this.props.goal;
         console.log();
     }
     render() {
