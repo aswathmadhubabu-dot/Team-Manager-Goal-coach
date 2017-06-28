@@ -20,7 +20,7 @@ class GoalList extends Component {
 
     render() {
         return (
-            <div className="col-md-4 col-md-offset-5 container">
+            <div className="col-lg-4 col-lg-offset-4 container">
                 <ul className="list-group">
                     {this
                         .props
