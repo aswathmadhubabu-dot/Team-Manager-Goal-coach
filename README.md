@@ -1,3 +1,3 @@
 # Team-Manager-Goal-coach
 A react js application for team management 
-Visit : <a href="https://ases573.github.io/Team-Manager-Goal-coach" target=_blank>SET GOAL!!!!!</a>
+Clone the repo navigate to root folder type npm start,you will be navigated to localhost://3000 Goalcoach serves there
