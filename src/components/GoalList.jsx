@@ -16,22 +16,24 @@ class GoalList extends Component {
                 .props
                 .setGoals(goals);
         })
-        
+
     }
 
     render() {
-        
+
         return (
-            <div className="col-lg-4 col-lg-offset-4 container text-center well">
+            <div className="col-lg-6 col-lg-offset-4 container text-center well">
                 <ul className="list-group">
-                    {
-                        
-                        this
+                    {this
                         .props
                         .goals
                         .map(function (goal, index) {
                             return (
-                                <li key={index} className="list-group-item">{goal.title}&nbsp;&nbsp;<span>Submitted By :<em>{goal.email} </em></span></li>
+                                <li key={index} className="list-group-item">{goal.title}&nbsp;&nbsp;<span>Submitted By :<em>{goal.email}
+                                        </em>
+                                    </span>
+                                    <button className="btn btn-primary">Complete</button>
+                                </li>
                             )
                         })
 }
